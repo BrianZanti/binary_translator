@@ -46,7 +46,7 @@ class BinaryTranslatorTest < Minitest::Test
     assert_equal "000000", bt.translate(" ")
   end
 
-  def test_it_ignores_special_characters
+  def test_it_translates_special_characters_to_empty_string
     bt = BinaryTranslator.new
     assert_equal "", bt.translate("!@{$#%^&*()}")
   end
